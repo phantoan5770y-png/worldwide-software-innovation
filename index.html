@@ -1,284 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style type="text/css">
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Huyền Thoại Bóng Đá - Lionel Messi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f2f5;
-            color: #1c1e21;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
 
-        main {
-            height: 70vh;
-            width: 100vw;
-            position: relative;
-            margin: 0 auto;
-        }
+    header {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+                  url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Lionel_Messi_20180626.jpg/800px-Lionel_Messi_20180626.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
 
-        footer {
-            height: 30vh;
-            background-color: #ffffff;
-        }
+    header h1 {
+      font-size: 3.5rem;
+      text-shadow: 2px 2px 5px black;
+    }
 
-        .row {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-            max-width: 1000px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
+    nav {
+      background-color: #222;
+      padding: 15px;
+      text-align: center;
+    }
 
-        .col-logo {
-            flex: 0 0 50%;
-            text-align: left;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
 
-        .col-form {
-            flex: 0 0 40%;
-            text-align: center;
-        }
+    nav a:hover {
+      color: #f1c40f;
+    }
 
-        .col-logo img {
-            max-width: 300px;
-        }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        .col-logo h2 {
-            font: 26px;
-            font-weight: 400;
-            padding: 0 30px;
-            line-height: 32px;
-        }
+    section h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
 
-        .col-form .form-container {
-            background-color: #ffffff;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            padding: 20px;
-            max-width: 400px;
-        }
+    section p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
 
-        .col-form .form-container input,
-        .col-form .form-container .btn-login {
-            width: 100%;
-            margin: 5px 0;
-            height: 45px;
-            vertical-align: middle;
-            font-size: 16px;
-        }
+    .achievements {
+      background-color: #fff;
+      padding: 40px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-        .col-form .form-container input {
-            border: 1px solid #dddfe2;
-            color: #1d2129;
-            padding: 0 8px;
-            outline: none;
-        }
+    .achievements ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-        .col-form .form-container input:focus {
-            border-color: #1877f2;
-            box-shadow: 0 0 0 2px #e7f3ff;
-        }
+    .achievements li {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      padding-left: 20px;
+      position: relative;
+    }
 
-        .col-form .form-container .btn-login {
-            background-color: #1877f2;
-            border: none;
-            border-radius: 6px;
-            font-size: 20px;
-            padding: 0 16px;
-            color: #ffffff;
-            font-weight: 700;
-        }
+    .achievements li::before {
+      content: "🏆";
+      position: absolute;
+      left: 0;
+    }
 
-        .col-form .form-container a {
-            display: block;
-            color: #1877f2;
-            font-size: 14px;
-            text-decoration: none;
-            padding: 10px 0 20px;
-            border-bottom: 1px solid #dadde1;
-        }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-        .col-form .form-container a:hover {
-            text-decoration: underline;
-        }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
 
-        .col-form .form-container .btn-new {
-            background-color: #42b72a;
-            border: none;
-            border-radius: 6px;
-            font-size: 17px;
-            line-height: 48px;
-            padding: 0 16px;
-            color: #ffffff;
-            font-weight: 700;
-            margin-top: 20px;
-        }
-
-        .col-form p {
-            font-size: 14px;
-        }
-
-        .col-form p a {
-            text-decoration: none;
-            color: #1c1e21;
-            font-weight: 600;
-        }
-
-        .col-form p a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-contents {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        footer ol {
-            display: flex;
-            flex-wrap: wrap;
-            list-style-type: none;
-            padding: 10px 0;
-        }
-
-        footer ol:first-child {
-            border-bottom: 1px solid #dddfe2;
-        }
-
-        footer ol:first-child li:last-child button {
-            background-color: #f5f6f7;
-            border: 1px solid #ccd0d5;
-            outline: none;
-            color: #4b4f56;
-            padding: 0 8px;
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        footer ol li {
-            padding-right: 15px;
-            font-size: 12px;
-            color: #385898;
-        }
-
-        footer ol li a {
-            text-decoration: none;
-            color: #385898;
-        }
-
-        footer ol li a:hover {
-            text-decoration: underline;
-        }
-
-        footer small {
-            font-size: 11px;
-        }
-    </style>
+      nav a {
+        margin: 0 10px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <main>
-        <div class="row">
-            <div class="col-logo">
-                <img src="imgs/fb_icon_325x325.png" alt="Logo">
-                <h2>Facebook helps you connect and share with the people in your life.</h2>
-            </div>
-            <div class="col-form">
-                <div class="form-container">
-                    <input type="text" placeholder="Email or phone number">
-                    <input type="password" placeholder="Password">
-                    <button class="btn-login">Login</button>
-                    <a href="#">Forgotten password?</a>
-                    <button class="btn-new">Create new Account</button>
-                </div>
-                <p><a href="#"><b>Create a Page</b></a> for a celebrity, brand or business.</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="footer-contents">
-            <ol>
-                <li>English (UK)</li>
-                <li><a href="#">മലയാളം</a></li>
-                <li><a href="#">தமிழ்</a></li>
-                <li><a href="#">తెలుగు</a></li>
-                <li><a href="#">বাংলা</a></li>
-                <li><a href="#">اردو</a></li>
-                <li><a href="#">हिन्दी</a></li>
-                <li><a href="#">ಕನ್ನಡ</a></li>
-                <li><a href="#">Español</a></li>
-                <li><a href="#">Português (Brasil)</a></li>
-                <li><a href="#">Français (France)</a></li>
-                <li><button>+</button></li>
-            </ol>
 
-            <ol>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Log In </a></li>
-                <li><a href="#">Messenger</a></li>
-                <li><a href="#">Facebook Lite</a></li>
-                <li><a href="#">Watch</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Page categories</a></li>
-                <li><a href="#">Places</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Locations</a></li>
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">PayGroups</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Oculus</a></li>
-                <li><a href="#">Portal</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Local</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Log In </a></li>
-                <li><a href="#">Messenger</a></li>
-                <li><a href="#">Facebook Lite</a></li>
-                <li><a href="#">Watch</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Page categories</a></li>
-                <li><a href="#">Places</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Locations</a></li>
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">PayGroups</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Oculus</a></li>
-                <li><a href="#">Portal</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Local</a></li>
-            </ol>
-            <small>Facebook © 2024</small>
-        </div>
-    </footer>
+  <nav>
+    <a href="#">Trang Chủ</a>
+    <a href="#tieu-su">Tiểu Sử</a>
+    <a href="#than-tich">Thành Tích</a>
+    <a href="#lien-he">Liên Hệ</a>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Lionel Messi - Huyền Thoại Bóng Đá Thế Giới</h1>
+    </div>
+  </header>
+
+  <section id="tieu-su">
+    <h2>Tiểu sử ngắn</h2>
+    <p>Lionel Andrés Messi, sinh ngày 24 tháng 6 năm 1987 tại Rosario, Argentina, là một trong những cầu thủ bóng đá vĩ đại nhất mọi thời đại. Anh nổi tiếng với kỹ thuật đi bóng điêu luyện, nhãn quan chiến thuật tuyệt vời và khả năng ghi bàn ấn tượng.</p>
+    <p>Messi bắt đầu sự nghiệp tại Barcelona và đã giành hơn 30 danh hiệu cùng CLB này. Sau đó, anh chuyển sang PSG và hiện đang thi đấu cho Inter Miami tại MLS.</p>
+  </section>
+
+  <section id="than-tich" class="achievements">
+    <h2>Thành tích nổi bật</h2>
+    <ul>
+      <li>8 Quả bóng vàng (Ballon d'Or)</li>
+      <li>6 Chiếc giày vàng châu Âu</li>
+      <li>4 lần vô địch UEFA Champions League</li>
+      <li>10 chức vô địch La Liga cùng Barcelona</li>
+      <li>Vô địch Copa America 2021 cùng ĐT Argentina</li>
+      <li>Vô địch World Cup 2022</li>
+    </ul>
+  </section>
+
+  <section id="lien-he">
+    <h2>Liên hệ & Người hâm mộ</h2>
+    <p>Nếu bạn là người hâm mộ Messi hoặc muốn tìm hiểu thêm, hãy gửi email cho chúng tôi:</p>
+    <p>Email: <a href="mailto:fans@messiworld.com">fans@messiworld.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 MessiWorld. Tất cả bản quyền được bảo lưu.
+  </footer>
+
 </body>
-<script>
-    const btn = document.querySelector('button');
-    btn.addEventListener('click', () => {
-        window.location.href = 'https://www.facebook.com/';
-    });
-</script>
-
 </html>
